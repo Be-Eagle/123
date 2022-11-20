@@ -5,27 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+   
 </head>
+<style>
+    .box{
+        width: 450px;
+        height: 450px;
+        background-color: pink;
+    }
+</style>
 <body>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <head>
-                        <th>第一个</th>
-                        <th>第二个</th>
-                    </head>
-                </tr>
-            </thead>
-            <tbody>
-                <td>123</td>
-            </tbody>
-        </table>
-        <ul>
-            <li>haha</li>
-        </ul>
-    </div>
+    <div id = "doom" class="box"></div>
+    <div id="halo" class="box"></div>
+    <script src="js/echarts.js"></script>
+    <script>
+        var chart = echarts.init(document.getElementById('doom'));
+        var option = {
+            title : {
+                name:"测试",
+            },
+            tooltip:{
+                name:"平方",
+            },
+            legend:{},
+            xAxis:{
+                data:['1','2','3','4','5']
+            },
+            yAxis:{
 
+            },
+            series:[
+                {
+                    name:"平方",
+                    type:"line",
+                    data:[1,4,9,16,25],
+                    smooth:true,
+                }
+            ]
+        };
+        chart.setOption(option);
+        chart = echarts.init(document.getElementById('halo'));
+        chart.setOption(option);
+    </script>
 </body>
 </html>
