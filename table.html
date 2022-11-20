@@ -18,34 +18,6 @@
     <div id = "doom" class="box"></div>
     <div id="halo" class="box"></div>
     <script src="js/echarts.js"></script>
-    <script>
-        var chart = echarts.init(document.getElementById('doom'));
-        var option = {
-            title : {
-                name:"测试",
-            },
-            tooltip:{
-                name:"平方",
-            },
-            legend:{},
-            xAxis:{
-                data:['1','2','3','4','5']
-            },
-            yAxis:{
-
-            },
-            series:[
-                {
-                    name:"平方",
-                    type:"line",
-                    data:[1,4,9,16,25],
-                    smooth:true,
-                }
-            ]
-        };
-        chart.setOption(option);
-        chart = echarts.init(document.getElementById('halo'));
-        chart.setOption(option);
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
